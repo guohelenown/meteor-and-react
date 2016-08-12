@@ -3,20 +3,14 @@ console.log("hello");
 
 // Import React library
 import React from 'react';
-
 import ImageDetail from './image_detail';
 
-const images = [
-	{title: 'Pen', link: 'http://dummyimage.com/600x400'},
-	{title: 'Pen1', link: 'http://dummyimage.com/600x400'},
-	{title: 'Pen2', link: 'http://dummyimage.com/600x400'}
-];
-
 // Create a component
-const ImageList = () => {
+const ImageList = (props) => {
 	
-	const RenderedImages = images.map(image => 
-		<ImageDetail key={image.title} image={image} />
+	console.log(props);
+	const RenderedImages = props.images.map(image => 
+		<ImageDetail key={image.Title} image={image} />
 	
 	);
 	
